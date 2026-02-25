@@ -154,6 +154,7 @@ services:
         restart: always
         environment:
             - REMNAWAVE_PANEL_URL=https://panel.com
+            - REMNAWWAVE_API=ключ_с_ремны
             - APP_PORT=3010
             - META_TITLE="Subscription Page Title"
             - META_DESCRIPTION="Subscription Page Description"
@@ -193,18 +194,6 @@ curl -fsSL https://get.docker.com | sh
 mkdir -p /opt/remnanode && cd /opt/remnanode
 ```
 
-### Настройка переменных окружения
-
-```bash
-nano .env
-```
-
-**Содержимое .env:**
-```env
-APP_PORT=2222
-SSL_CERT=CERT_FROM_MAIN_PANEL
-```
-
 ### Создание docker-compose.yml
 
 ```bash
@@ -213,15 +202,7 @@ nano docker-compose.yml
 
 **Содержимое docker-compose.yml:**
 ```yaml
-services:
-    remnanode:
-        container_name: remnanode
-        hostname: remnanode
-        image: remnawave/node:latest
-        restart: always
-        network_mode: host
-        env_file:
-            - .env
+Скопировать docker-compose.yml с панели Remnawave
 ```
 
 ### Запуск ноды
