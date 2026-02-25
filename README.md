@@ -154,7 +154,7 @@ services:
         restart: always
         environment:
             - REMNAWAVE_PANEL_URL=https://panel.com
-            - REMNAWWAVE_API=ключ_с_ремны
+            - REMNAWAVE_API=ключ_с_ремны
             - APP_PORT=3010
             - META_TITLE="Subscription Page Title"
             - META_DESCRIPTION="Subscription Page Description"
